@@ -47,6 +47,10 @@ The Bicep project is configured to work on the following principle
 - The **resourcezone.bicep** in returns calls the modules in **modules** directory and creates the resources.
 - The **main.parameters.json** file is passed to the command which contains all the key value pair of names of the resources.
 
+### Authenticate Azure CLI
+
+Hit the command **az login** from Comamnd Prompt or Terminal depending upon your OS. More details can be found [here](https://docs.microsoft.com/en-us/cli/azure/get-started-with-azure-cli)
+
 ### Trigger Manually
 
 Fire the below command to create the resources using Bicep script
