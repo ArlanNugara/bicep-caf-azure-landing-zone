@@ -1,0 +1,43 @@
+# Bicep Deployment Pipeline Script
+
+trigger: none
+
+name: $(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+
+variables:
+  azureServiceConnection: '<Azure DevOps Service Connection Name>'
+
+stages:
+- stage: test_and_validate
+  displayName: 'Test and Validate'
+  jobs:
+  - job: bicep_validation
+    displayName: Bicep Resource Deployment Validation
+    pool: 
+      vmImage: ubuntu-latest
+    steps:
+    - task: AzureCLI@2
+      displayName: 'Bicep Main Template Validation'
+      inputs:
+        azureSubscription: $(azureServiceConnection)
+        scriptType: bash
+        scriptLocation: inlineScript
+        inlineScript: |
+          az deployment sub validate --location $(location) --name $(deploymentName) --template-file $(templateFile) --parameters $(parameterFile)
+
+- stage: deployment
+  displayName: 'Deployment'
+  jobs:
+  - job: bicep_deployment
+    displayName: Bicep Resource Deployment 
+    pool: 
+      vmImage: ubuntu-latest
+    steps:
+    - task: AzureCLI@2
+      displayName: 'Bicep Main Template Deployment'
+      inputs:
+        azureSubscription: $(azureServiceConnection)
+        scriptType: bash
+        scriptLocation: inlineScript
+        inlineScript: |
+          az deployment sub create --location $(location) --name $(deploymentName) --template-file $(templateFile) --parameters $(parameterFile)

@@ -1,0 +1,1451 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "resourceArray": {
+      "value": [
+        {
+          "rgName": "<Your Value here>",
+          "rgLocation": "<Your Value here>",
+          "zoneName": "<Your Value here>",
+          "tags": {
+            "Created By": "<Your Value here>",
+            "Customer": "<Your Value here>",
+            "Env": "<Your Value here>",
+            "Region": "<Your Value here>",
+            "App": "<Your Value here>",
+            "Cost Center": "<Your Value here>",
+            "Department": "<Your Value here>",
+            "Owner": "<Your Value here>",
+            "Policy": "<Your Value here>",
+            "Product": "<Your Value here>",
+            "SalesforceCSTID": "<Your Value here>",
+            "SLASeverity": "<Your Value here>",
+            "Stakeholders": "<Your Value here>",
+            "Tier": "<Your Value here>"
+          },
+          "networkWatcherArray": [
+            {
+              "name": "<Your Value here>",
+              "location": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              }
+            }
+          ],
+          "vNetArray": [
+            {
+              "vNetName": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "T<Your Value here>1"
+              },
+              "DDoSProtectionPlanName": "<Your Value here>",
+              "DDoSProtectionRGName": "<Your Value here>",
+              "vNetAddressSpace": "<Your Value here>",
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              },
+              "subnets": [
+                {
+                  "vNetName": "<Your Value here>",
+                  "subnetName": "<Your Value here>",
+                  "SubnetAddressSpace": "<Your Value here>",
+                  "networkSecurityGroupName": "<Your Value here>",
+                  "routeTableName": "<Your Value here>"
+                },
+                {
+                  "vNetName": "<Your Value here>",
+                  "subnetName": "AzureBastionSubnet",
+                  "SubnetAddressSpace": "<Your Value here>",
+                  "networkSecurityGroupName": "",
+                  "routeTableName": ""
+                },
+                {
+                  "vNetName": "<Your Value here>",
+                  "subnetName": "AzureFirewallSubnet",
+                  "SubnetAddressSpace": "<Your Value here>",
+                  "networkSecurityGroupName": "",
+                  "routeTableName": "<Your Value here>"
+                },
+                {
+                  "vNetName": "<Your Value here>",
+                  "subnetName": "GatewaySubnet",
+                  "SubnetAddressSpace": "<Your Value here>",
+                  "networkSecurityGroupName": "",
+                  "routeTableName": ""
+                }
+              ]
+            }
+          ],
+          "vpnGatewayArray": [
+            {
+              "name": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              },
+              "skuname": "<Your Value here>",
+              "skutier": "<Your Value here>",
+              "gatewayType": "<Your Value here>",
+              "vpnType": "<Your Value here>",
+              "enableBgp": false,
+              "ipConfigurations": [
+                {
+                  "name": "<Your Value here>",
+                  "publicIPAddressName": "<Your Value here>",
+                  "vnetName": "<Your Value here>",
+                  "subnetname": "GatewaySubnet"
+                }
+              ]
+            }
+          ],
+          "nsgArray": [
+            {
+              "nsgName": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "secRules": [
+                {
+                  "name": "<Your Value here>",
+                  "priority": 1000,
+                  "sourceAddressPrefix": "<Your Value here>",
+                  "protocol": "<Your Value here>",
+                  "destinationPortRange": "<Your Value here>",
+                  "access": "<Your Value here>",
+                  "direction": "<Your Value here>",
+                  "sourcePortRange": "<Your Value here>",
+                  "destinationAddressPrefix": "<Your Value here>"
+                }
+              ],
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              }
+            }
+          ],
+          "vmArray": [],
+          "nicArray": [],
+          "pipArray": [
+            {
+              "name": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              },
+              "sku": {
+                "name": "<Your Value here>",
+                "tier": "<Your Value here>"
+              },
+              "properties": {
+                "publicIPAllocationMethod": "<Your Value here>"
+              }
+            },
+            {
+              "name": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              },
+              "sku": {
+                "name": "<Your Value here>",
+                "tier": "<Your Value here>"
+              },
+              "properties": {
+                "publicIPAllocationMethod": "<Your Value here>"
+              }
+            },
+            {
+              "name": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              },
+              "sku": {
+                "name": "<Your Value here>",
+                "tier": "Regi<Your Value here>onal"
+              },
+              "properties": {
+                "publicIPAllocationMethod": "St<Your Value here>atic"
+              }
+            }
+          ],
+          "bastionHostArray": [
+            {
+              "name": "<Your Value here>",
+              "ipConfigurations": {
+                "publicIPAddressName": "<Your Value here>",
+                "vnetName": "<Your Value here>",
+                "subnetname": "AzureBastionSubnet"
+              },
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              },
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              }
+            }
+          ],
+          "dbArray": [],
+          "appArray": [],
+          "storageArray": [
+            {
+              "name": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              },
+              "kind": "<Your Value here>",
+              "skuname": "<Your Value here>",
+              "accessTier": "<Your Value here>"
+            }
+          ],
+          "logStorageArray": [
+            {
+              "name": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              },
+              "kind": "<Your Value here>",
+              "skuname": "<Your Value here>",
+              "accessTier": "<Your Value here>"
+            }
+          ],
+          "routeTableArray": [
+            {
+              "routeTableName": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "routes": [
+                {
+                  "name": "<Your Value here>-outbound",
+                  "properties": {
+                    "nextHopType": "<Your Value here>",
+                    "addressPrefix": "<Your Value here>",
+                    "nextHopIpAddress": "<Your Value here>"
+                  }
+                }
+              ]
+            }
+          ],
+          "firewallArray": [
+            {
+              "name": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              },
+              "applicationRuleCollections": [
+                {
+                  "name": "<Your Value here>",
+                  "priority": 200,
+                  "action": "<Your Value here>",
+                  "rules": [
+                    {
+                      "name": "<Your Value here>",
+                      "fqdnTags": [],
+                      "targetFqdns": [
+                        "<Your Value here>"
+                      ],
+                      "protocols": [
+                        {
+                          "port": 80,
+                          "protocolType": "http"
+                        },
+                        {
+                          "port": 443,
+                          "protocolType": "https"
+                        }
+                      ],
+                      "sourceAddresses": "<Your Value here>"
+                    }
+                  ]
+                }
+              ],
+              "ipConfigurations": [
+                {
+                  "name": "<Your Value here>-",
+                  "publicIPAddressName": "<Your Value here>",
+                  "vnetName": "<Your Value here>",
+                  "subnetName": "AzureFirewallSubnet"
+                }
+              ]
+            }
+          ],
+          "appGatewayArray": [],
+          "logAnalyticsWorkspaceArray": [
+            {
+              "name": "<Your Value here>",
+              "sku": "<Your Value here>",
+              "retentionInDays": 90,
+              "dailyQuotaGb": 1,
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              }
+            }
+          ]
+        },
+        {
+          "rgName": "<Your Value here>",
+          "rgLocation": "<Your Value here>",
+          "zoneName": "<Your Value here>",
+          "tags": {
+            "Created By": "<Your Value here>",
+            "Customer": "<Your Value here>",
+            "Env": "<Your Value here>",
+            "Region": "<Your Value here>",
+            "App": "<Your Value here>",
+            "Cost Center": "<Your Value here>",
+            "Department": "<Your Value here>",
+            "Owner": "<Your Value here>",
+            "Policy": "<Your Value here>",
+            "Product": "<Your Value here>",
+            "SalesforceCSTID": "<Your Value here>",
+            "SLASeverity": "<Your Value here>",
+            "Stakeholders": "<Your Value here>",
+            "Tier": "<Your Value here>"
+          },
+          "networkWatcherArray": [],
+          "vNetArray": [
+            {
+              "vNetName": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "vNetAddressSpace": "<Your Value here>",
+              "DDoSProtectionPlanName": "<Your Value here>",
+              "DDoSProtectionRGName": "<Your Value here>",
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              },
+              "subnets": [
+                {
+                  "vNetName": "<Your Value here>",
+                  "subnetName": "<Your Value here>",
+                  "SubnetAddressSpace": "<Your Value here>",
+                  "networkSecurityGroupName": "<Your Value here>",
+                  "routeTableName": ""
+                },
+                {
+                  "vNetName": "<Your Value here>",
+                  "subnetName": "<Your Value here>",
+                  "SubnetAddressSpace": "<Your Value here>",
+                  "networkSecurityGroupName": "<Your Value here>",
+                  "routeTableName": "<Your Value here>"
+                }
+              ]
+            }
+          ],
+          "vpnGatewayArray": [],
+          "nsgArray": [
+            {
+              "nsgName": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "secRules": [
+                {
+                  "name": "<Your Value here>-deny-http",
+                  "priority": 1000,
+                  "sourceAddressPrefix": "<Your Value here>",
+                  "protocol": "<Your Value here>",
+                  "destinationPortRange": "<Your Value here>",
+                  "access": "<Your Value here>",
+                  "direction": "<Your Value here>",
+                  "sourcePortRange": "<Your Value here>",
+                  "destinationAddressPrefix": "<Your Value here>"
+                },
+                {
+                  "name": "<Your Value here>",
+                  "priority": 1001,
+                  "sourceAddressPrefix": "<Your Value here>",
+                  "protocol": "<Your Value here>",
+                  "destinationPortRange": "<Your Value here>",
+                  "access": "<Your Value here>",
+                  "direction": "<Your Value here>",
+                  "sourcePortRange": "<Your Value here>",
+                  "destinationAddressPrefix": "<Your Value here>"
+                }
+              ],
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              }
+            }
+          ],
+          "vmArray": [
+            {
+              "name": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              },
+              "size": "<Your Value here>",
+              "createOption": "<Your Value here>",
+              "osDiskType": "<Your Value here>",
+              "publisher": "<Your Value here>",
+              "offfer": "<Your Value here>",
+              "sku": "<Your Value here>",
+              "version": "<Your Value here>",
+              "nicName": "<Your Value here>",
+              "computername": "<Your Value here>",
+              "adminUsername": "<Your Value here>",
+              "adminPasswordOrKey": "<Your Value here>"
+            }
+          ],
+          "nicArray": [
+            {
+              "name": "<Your Value here>",
+              "nsgName": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              },
+              "ipConfigurations": {
+                "name": "<Your Value here>",
+                "vnetName": "<Your Value here>",
+                "subnetName": "<Your Value here>",
+                "publicIPAddressName": "<Your Value here>"
+              }
+            }
+          ],
+          "pipArray": [
+            {
+              "name": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              },
+              "sku": {
+                "name": "<Your Value here>",
+                "tier": "<Your Value here>"
+              },
+              "properties": {
+                "publicIPAllocationMethod": "<Your Value here>"
+              }
+            }
+          ],
+          "bastionHostArray": [],
+          "dbArray": [
+            {
+              "name": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              },
+              "properties": {
+                "collation": "<Your Value here>",
+                "requestedBackupStorageRedundancy": "<Your Value here>"
+              },
+              "sqlServer": {
+                "name": "<Your Value here>",
+                "tags": {
+                  "Created By": "<Your Value here>",
+                  "Customer": "<Your Value here>",
+                  "Env": "<Your Value here>",
+                  "Region": "<Your Value here>",
+                  "App": "<Your Value here>",
+                  "Cost Center": "<Your Value here>",
+                  "Department": "<Your Value here>",
+                  "Owner": "<Your Value here>",
+                  "Policy": "<Your Value here>",
+                  "Product": "<Your Value here>",
+                  "SalesforceCSTID": "<Your Value here>",
+                  "SLASeverity": "<Your Value here>",
+                  "Stakeholders": "<Your Value here>",
+                  "Tier": "<Your Value here>"
+                },
+                "privateEndpointVnetName": "<Your Value here>",
+                "privateEndpointSubnetName": "<Your Value here>",
+                "properties": {
+                  "administratorLoginId": "<Your Value here>",
+                  "administratorLoginPassword": "<Your Value here>",
+                  "minimalTlsVersion": "<Your Value here>"
+                }
+              }
+            }
+          ],
+          "appArray": [
+            {
+              "name": "<Your Value here>",
+              "appServicePlanName": "<Your Value here>",
+              "skuName": "<Your Value here>",
+              "skuCapacity": 1,
+              "connectionName": "<Your Value here>",
+              "siteConfig": {
+                "linuxFxVersion": "<Your Value here>"
+              },
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              }
+            }
+          ],
+          "storageArray": [
+            {
+              "name": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              },
+              "kind": "<Your Value here>",
+              "skuname": "<Your Value here>",
+              "accessTier": "<Your Value here>"
+            }
+          ],
+          "logStorageArray": [],
+          "routeTableArray": [],
+          "firewallArray": [],
+          "appGatewayArray": [],
+          "logAnalyticsWorkspaceArray": []
+        },
+        {
+          "rgName": "<Your Value here>",
+          "rgLocation": "<Your Value here>",
+          "zoneName": "<Your Value here>",
+          "tags": {
+            "Created By": "<Your Value here>",
+            "Customer": "<Your Value here>",
+            "Env": "<Your Value here>",
+            "Region": "<Your Value here>",
+            "App": "<Your Value here>",
+            "Cost Center": "<Your Value here>",
+            "Department": "<Your Value here>",
+            "Owner": "<Your Value here>",
+            "Policy": "<Your Value here>",
+            "Product": "<Your Value here>",
+            "SalesforceCSTID": "<Your Value here>",
+            "SLASeverity": "<Your Value here>",
+            "Stakeholders": "<Your Value here>",
+            "Tier": "<Your Value here>"
+          },
+          "networkWatcherArray": [],
+          "vNetArray": [
+            {
+              "vNetName": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "vNetAddressSpace": "<Your Value here>",
+              "DDoSProtectionPlanName": "<Your Value here>",
+              "DDoSProtectionRGName": "<Your Value here>",
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              },
+              "subnets": [
+                {
+                  "vNetName": "<Your Value here>",
+                  "subnetName": "<Your Value here>",
+                  "SubnetAddressSpace": "<Your Value here>",
+                  "networkSecurityGroupName": "<Your Value here>",
+                  "routeTableName": ""
+                },
+                {
+                  "vNetName": "<Your Value here>",
+                  "subnetName": "<Your Value here>",
+                  "SubnetAddressSpace": "<Your Value here>",
+                  "networkSecurityGroupName": "<Your Value here>",
+                  "routeTableName": ""
+                }
+              ]
+            }
+          ],
+          "vpnGatewayArray": [],
+          "nsgArray": [
+            {
+              "nsgName": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "secRules": [
+                {
+                  "name": "<Your Value here>",
+                  "priority": 1000,
+                  "sourceAddressPrefix": "<Your Value here>",
+                  "protocol": "<Your Value here>",
+                  "destinationPortRange": "<Your Value here>",
+                  "access": "<Your Value here>",
+                  "direction": "<Your Value here>",
+                  "sourcePortRange": "<Your Value here>",
+                  "destinationAddressPrefix": "<Your Value here>"
+                }
+              ],
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              }
+            }
+          ],
+          "vmArray": [
+            {
+              "name": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              },
+              "size": "Standard_B1s",
+              "createOption": "FromImage",
+              "osDiskType": "Standard_LRS",
+              "publisher": "Canonical",
+              "offfer": "UbuntuServer",
+              "sku": "<Your Value here>",
+              "version": "la<Your Value here>",
+              "nicName": "<Your Value here>",
+              "computername": "<Your Value here>",
+              "adminUsername": "<Your Value here>",
+              "adminPasswordOrKey": "<Your Value here>"
+            }
+          ],
+          "nicArray": [
+            {
+              "name": "<Your Value here>",
+              "nsgName": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              },
+              "ipConfigurations": {
+                "name": "<Your Value here>",
+                "vnetName": "<Your Value here>",
+                "subnetName": "<Your Value here>",
+                "publicIPAddressName": "<Your Value here>"
+              }
+            }
+          ],
+          "pipArray": [
+            {
+              "name": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              },
+              "sku": {
+                "name": "<Your Value here>",
+                "tier": "<Your Value here>"
+              },
+              "properties": {
+                "publicIPAllocationMethod": "<Your Value here>"
+              }
+            }
+          ],
+          "bastionHostArray": [],
+          "dbArray": [
+            {
+              "name": "<Your Value here>",
+              "properties": {
+                "collation": "<Your Value here>",
+                "requestedBackupStorageRedundancy": "<Your Value here>"
+              },
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              },
+              "sqlServer": {
+                "name": "<Your Value here>-server",
+                "tags": {
+                  "Created By": "<Your Value here>",
+                  "Customer": "<Your Value here>",
+                  "Env": "<Your Value here>",
+                  "Region": "<Your Value here>",
+                  "App": "<Your Value here>",
+                  "Cost Center": "<Your Value here>",
+                  "Department": "<Your Value here>",
+                  "Owner": "<Your Value here>",
+                  "Policy": "<Your Value here>",
+                  "Product": "<Your Value here>",
+                  "SalesforceCSTID": "<Your Value here>",
+                  "SLASeverity": "<Your Value here>",
+                  "Stakeholders": "<Your Value here>",
+                  "Tier": "<Your Value here>"
+                },
+                "privateEndpointVnetName": "<Your Value here>",
+                "privateEndpointSubnetName": "<Your Value here>",
+                "properties": {
+                  "administratorLoginId": "<Your Value here>",
+                  "administratorLoginPassword": "<Your Value here>",
+                  "minimalTlsVersion": "<Your Value here>"
+                }
+              }
+            }
+          ],
+          "appArray": [],
+          "storageArray": [
+            {
+              "name": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "Pol<Your Value here>icy",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              },
+              "kind": "Stor<Your Value here>ageV2",
+              "skuname": "<Your Value here>",
+              "accessTier": "<Your Value here>"
+            }
+          ],
+          "logStorageArray": [],
+          "routeTableArray": [],
+          "firewallArray": [],
+          "appGatewayArray": [],
+          "logAnalyticsWorkspaceArray": []
+        },
+        {
+          "rgName": "<Your Value here>",
+          "rgLocation": "<Your Value here>",
+          "zoneName": "<Your Value here>",
+          "tags": {
+            "Created By": "<Your Value here>",
+            "Customer": "<Your Value here>",
+            "Env": "<Your Value here>",
+            "Region": "<Your Value here>",
+            "App": "<Your Value here>",
+            "Cost Center": "<Your Value here>",
+            "Department": "<Your Value here>",
+            "Owner": "<Your Value here>",
+            "Policy": "<Your Value here>",
+            "Product": "<Your Value here>",
+            "SalesforceCSTID": "<Your Value here>",
+            "SLASeverity": "<Your Value here>",
+            "Stakeholders": "<Your Value here>",
+            "Tier": "<Your Value here>"
+          },
+          "networkWatcherArray": [],
+          "vNetArray": [
+            {
+              "vNetName": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "vNetAddressSpace": "<Your Value here>",
+              "DDoSProtectionPlanName": "<Your Value here>",
+              "DDoSProtectionRGName": "<Your Value here>",
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              },
+              "subnets": [
+                {
+                  "vNetName": "<Your Value here>",
+                  "subnetName": "<Your Value here>",
+                  "SubnetAddressSpace": "<Your Value here>",
+                  "networkSecurityGroupName": "<Your Value here>",
+                  "routeTableName": ""
+                },
+                {
+                  "vNetName": "<Your Value here>",
+                  "subnetName": "GatewaySubnet",
+                  "SubnetAddressSpace": "<Your Value here>",
+                  "networkSecurityGroupName": "<Your Value here>",
+                  "routeTableName": "<Your Value here>"
+                }
+              ]
+            }
+          ],
+          "vpnGatewayArray": [
+            {
+              "name": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              },
+              "skuname": "<Your Value here>",
+              "skutier": "<Your Value here>",
+              "gatewayType": "<Your Value here>",
+              "vpnType": "<Your Value here>",
+              "enableBgp": false,
+              "ipConfigurations": [
+                {
+                  "name": "<Your Value here>",
+                  "publicIPAddressName": "<Your Value here>",
+                  "vnetName": "<Your Value here>",
+                  "subnetname": "GatewaySubnet"
+                }
+              ]
+            }
+          ],
+          "nsgArray": [
+            {
+              "nsgName": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "secRules": [
+                {
+                  "name": "<Your Value here>",
+                  "priority": 1000,
+                  "sourceAddressPrefix": "<Your Value here>",
+                  "protocol": "Tcp",
+                  "destinationPortRange": "<Your Value here>",
+                  "access": "<Your Value here>",
+                  "direction": "<Your Value here>",
+                  "sourcePortRange": "<Your Value here>",
+                  "destinationAddressPrefix": "<Your Value here>"
+                }
+              ],
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              }
+            }
+          ],
+          "vmArray": [],
+          "nicArray": [],
+          "pipArray": [
+            {
+              "name": "<Your Value here>",
+              "tags": {
+                "Created By": "<Your Value here>",
+                "Customer": "<Your Value here>",
+                "Env": "<Your Value here>",
+                "Region": "<Your Value here>",
+                "App": "<Your Value here>",
+                "Cost Center": "<Your Value here>",
+                "Department": "<Your Value here>",
+                "Owner": "<Your Value here>",
+                "Policy": "<Your Value here>",
+                "Product": "<Your Value here>",
+                "SalesforceCSTID": "<Your Value here>",
+                "SLASeverity": "<Your Value here>",
+                "Stakeholders": "<Your Value here>",
+                "Tier": "<Your Value here>"
+              },
+              "logAnalytics": {
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
+              },
+              "sku": {
+                "name": "<Your Value here>",
+                "tier": "<Your Value here>"
+              },
+              "properties": {
+                "publicIPAllocationMethod": "<Your Value here>"
+              }
+            }
+          ],
+          "bastionHostArray": [],
+          "dbArray": [],
+          "appArray": [],
+          "storageArray": [],
+          "logStorageArray": [],
+          "routeTableArray": [],
+          "firewallArray": [],
+          "appGatewayArray": [],
+          "logAnalyticsWorkspaceArray": []
+        }
+      ]
+    },
+    "vpnGatewayConnectionArray": {
+      "value": [
+        {
+          "name": "<Your Value here>",
+          "fromRgName": "<Your Value here>",
+          "toRgName": "<Your Value here>",
+          "sourceVpnGatewayName": "<Your Value here>",
+          "targetVpnGatewayName": "<Your Value here>",
+          "connectionType": "<Your Value here>",
+          "sharedKey": "<Your Value here>",
+          "tags": {
+            "Created By": "<Your Value here>",
+            "Customer": "<Your Value here>",
+            "Env": "<Your Value here>",
+            "Region": "<Your Value here>",
+            "App": "<Your Value here>",
+            "Cost Center": "<Your Value here>",
+            "Department": "<Your Value here>",
+            "Owner": "<Your Value here>",
+            "Policy": "Pol<Your Value here>icy",
+            "Product": "<Your Value here>",
+            "SalesforceCSTID": "<Your Value here>",
+            "SLASeverity": "<Your Value here>",
+            "Stakeholders": "<Your Value here>",
+            "Tier": "<Your Value here>"
+          }
+        },
+        {
+          "name": "<Your Value here>-vpn-con2",
+          "fromRgName": "<Your Value here>",
+          "toRgName": "<Your Value here>",
+          "sourceVpnGatewayName": "<Your Value here>",
+          "targetVpnGatewayName": "<Your Value here>",
+          "connectionType": "<Your Value here>",
+          "sharedKey": "<Your Value here>",
+          "tags": {
+            "Created By": "<Your Value here>",
+            "Customer": "<Your Value here>",
+            "Env": "<Your Value here>",
+            "Region": "<Your Value here>",
+            "App": "<Your Value here>",
+            "Cost Center": "<Your Value here>",
+            "Department": "<Your Value here>",
+            "Owner": "<Your Value here>",
+            "Policy": "<Your Value here>",
+            "Product": "<Your Value here>",
+            "SalesforceCSTID": "<Your Value here>",
+            "SLASeverity": "<Your Value here>",
+            "Stakeholders": "<Your Value here>",
+            "Tier": "<Your Value here>"
+          }
+        }
+      ]
+    },
+    "vnetPeeringArray": {
+      "value": [
+        {
+          "name": "<Your Value here>",
+          "vNetName": "<Your Value here>",
+          "fromRgName": "<Your Value here>",
+          "toRgName": "<Your Value here>",
+          "peeredwith": "<Your Value here>",
+          "allowVirtualNetworkAccess": true,
+          "allowForwardedTraffic": false,
+          "allowGatewayTransit": false,
+          "useRemoteGateways": false
+        },
+        {
+          "name": "<Your Value here>",
+          "vNetName": "<Your Value here>",
+          "fromRgName": "<Your Value here>",
+          "toRgName": "<Your Value here>",
+          "peeredwith": "<Your Value here>",
+          "allowVirtualNetworkAccess": true,
+          "allowForwardedTraffic": false,
+          "allowGatewayTransit": false,
+          "useRemoteGateways": false
+        },
+        {
+          "name": "<Your Value here>",
+          "vNetName": "<Your Value here>",
+          "fromRgName": "<Your Value here>",
+          "toRgName": "<Your Value here>",
+          "peeredwith": "<Your Value here>",
+          "allowVirtualNetworkAccess": true,
+          "allowForwardedTraffic": false,
+          "allowGatewayTransit": false,
+          "useRemoteGateways": false
+        },
+        {
+          "name": "<Your Value here>",
+          "vNetName": "<Your Value here>",
+          "fromRgName": "<Your Value here>",
+          "toRgName": "<Your Value here>",
+          "peeredwith": "<Your Value here>",
+          "allowVirtualNetworkAccess": true,
+          "allowForwardedTraffic": false,
+          "allowGatewayTransit": false,
+          "useRemoteGateways": false
+        }
+      ]
+    },
+    "DDoSProtectionPlan": {
+      "value": {
+        "name": "<Your Value here>",
+        "location": "<Your Value here>",
+        "rgName": "<Your Value here>",
+        "tags": {
+          "Created By": "<Your Value here>",
+          "Customer": "<Your Value here>",
+          "Env": "<Your Value here>",
+          "Region": "<Your Value here>",
+          "App": "<Your Value here>",
+          "Cost Center": "<Your Value here>",
+          "Department": "<Your Value here>",
+          "Owner": "<Your Value here>",
+          "Policy": "<Your Value here>",
+          "Product": "<Your Value here>",
+          "SalesforceCSTID": "<Your Value here>",
+          "SLASeverity": "<Your Value here>",
+          "Stakeholders": "<Your Value here>",
+          "Tier": "<Your Value here>"
+        }
+      }
+    }
+  }
+}
