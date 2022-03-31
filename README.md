@@ -1,4 +1,16 @@
-# Deployment Steps
+# What is an Azure Landing Zone ?
+
+Azure landing zones are the output of a multisubscription Azure environment that accounts for scale, security governance, networking, and identity. Azure landing zones enable application migration, modernization, and innovation at enterprise-scale in Azure. These zones consider all platform resources that are required to support the customer's application portfolio and don't differentiate between infrastructure as a service or platform as a service.
+
+![Diagram](./images/Azure_Landing_Zone.png)
+
+Here's what Microsoft Official Article says about a landing Zone - [Watch it Here] (https://www.microsoft.com/en-us/videoplayer/embed/RE4xdvm?postJsllMsg=true)
+
+## Features of Azure Landing Zone
+
+
+
+# What is Cloud Adoption Framework ?
 
 ## Resources details
 
