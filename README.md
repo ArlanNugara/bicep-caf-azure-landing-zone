@@ -4,7 +4,7 @@ Azure landing zones are the output of a multisubscription Azure environment that
 
 ![Diagram](./images/Azure_Landing_Zone.png)
 
-Here's what Microsoft Official Article says about a landing Zone - [Watch it Here] (https://www.microsoft.com/en-us/videoplayer/embed/RE4xdvm?postJsllMsg=true)
+Here's what Microsoft Official Article says about a landing Zone - "[Watch it Here]" "(https://www.microsoft.com/en-us/videoplayer/embed/RE4xdvm?postJsllMsg=true)"
 
 ## Features of Azure Landing Zone
 
