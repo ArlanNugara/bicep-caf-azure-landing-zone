@@ -147,9 +147,9 @@ The parameter file is a simple json file which holds value of all the variables.
             "DDoSProtectionRGName": "<Your Value here>",
             "vNetAddressSpace": "<Your Value here>",
             "logAnalytics": {
-            "workspaceRGName": "<Your Value here>",
-            "logStorageAccountName": "<Your Value here>",
-            "logWorkSpaceName": "<Your Value here>"
+                "workspaceRGName": "<Your Value here>",
+                "logStorageAccountName": "<Your Value here>",
+                "logWorkSpaceName": "<Your Value here>"
             },
             "subnets": [
             {
