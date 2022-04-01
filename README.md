@@ -73,7 +73,22 @@ The Bicep project is configured to work on the following principle
 
 ## Some code examples
 
-The bicep code is defined to run in loops for the values it gets from the parameter file. Here **resourceArray** and **rgName** are the keys in **main.parameters.json** file
+The **main.bicep** file starts with a **targetScope** variable which defines the deployment scope of the code.
+
+```
+targetScope = 'subscription'
+```
+
+Then it defines the parameters and their type
+
+```
+param resourceArray array
+param vpnGatewayConnectionArray array
+param vnetPeeringArray array
+param DDoSProtectionPlan object
+```
+
+The code is defined to run in loops for the values it gets from the parameter file. Here **resourceArray**, **rgName**, **rgLocation** and **tags** are the keys in **main.parameters.json** file.
 
 ```
 resource rgs 'Microsoft.Resources/resourceGroups@2021-04-01' = [for (res, i) in resourceArray: {
@@ -81,6 +96,94 @@ resource rgs 'Microsoft.Resources/resourceGroups@2021-04-01' = [for (res, i) in 
   location: res.rgLocation
   tags: res.tags
 }]
+```
+
+Another example of creating a VNET peering. You can see few additional lines of code here. The **dependsOn** work similar way like **depends_on** in Terraform. The resource will get created only after the dependent resource is created.
+
+```
+module vnetpeeringM 'modules/vnetpeering.bicep' = [for (vnetpeer, i) in vnetPeeringArray: {
+  name: '${vnetpeer.fromRgName}-VNETPEERING-Module-${i}'
+  scope: resourceGroup(vnetpeer.fromRgName)
+  dependsOn: [
+    reszoneM
+  ]
+  params: {
+    vnetpeeringdata: vnetpeer
+  }
+}]
+```
+
+You can also define variables in your bicep code. Here's an example from **applicationgateway.bicep** file
+
+```
+var appgw_id = resourceId('Microsoft.Network/applicationGateways', appGWData.name)
+```
+
+The parameter file is a simple json file which holds value of all the variables.
+
+```
+{
+    ................... Truncated ...................
+    "vNetArray": [
+        {
+            "vNetName": "<Your Value here>",
+            "tags": {
+            "Created By": "<Your Value here>",
+            "Customer": "<Your Value here>",
+            "Env": "<Your Value here>",
+            "Region": "<Your Value here>",
+            "App": "<Your Value here>",
+            "Cost Center": "<Your Value here>",
+            "Department": "<Your Value here>",
+            "Owner": "<Your Value here>",
+            "Policy": "<Your Value here>",
+            "Product": "<Your Value here>",
+            "SalesforceCSTID": "<Your Value here>",
+            "SLASeverity": "<Your Value here>",
+            "Stakeholders": "<Your Value here>",
+            "Tier": "T<Your Value here>1"
+            },
+            "DDoSProtectionPlanName": "<Your Value here>",
+            "DDoSProtectionRGName": "<Your Value here>",
+            "vNetAddressSpace": "<Your Value here>",
+            "logAnalytics": {
+            "workspaceRGName": "<Your Value here>",
+            "logStorageAccountName": "<Your Value here>",
+            "logWorkSpaceName": "<Your Value here>"
+            },
+            "subnets": [
+            {
+                "vNetName": "<Your Value here>",
+                "subnetName": "<Your Value here>",
+                "SubnetAddressSpace": "<Your Value here>",
+                "networkSecurityGroupName": "<Your Value here>",
+                "routeTableName": "<Your Value here>"
+            },
+            {
+                "vNetName": "<Your Value here>",
+                "subnetName": "AzureBastionSubnet",
+                "SubnetAddressSpace": "<Your Value here>",
+                "networkSecurityGroupName": "",
+                "routeTableName": ""
+            },
+            {
+                "vNetName": "<Your Value here>",
+                "subnetName": "AzureFirewallSubnet",
+                "SubnetAddressSpace": "<Your Value here>",
+                "networkSecurityGroupName": "",
+                "routeTableName": "<Your Value here>"
+            },
+            {
+                "vNetName": "<Your Value here>",
+                "subnetName": "GatewaySubnet",
+                "SubnetAddressSpace": "<Your Value here>",
+                "networkSecurityGroupName": "",
+                "routeTableName": ""
+            }
+            ]
+        }
+        ]
+    .................. Truncated ................
 ```
 
 ## Resources that are created
