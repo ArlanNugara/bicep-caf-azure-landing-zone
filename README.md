@@ -71,6 +71,18 @@ The Bicep project is configured to work on the following principle
 - The **resourcezone.bicep** in returns calls the modules in **modules** directory and creates the resources.
 - The **main.parameters.json** file is passed to the command which contains all the key value pair of names of the resources. You need to exchange **"<Your Value Here>"** with your values.
 
+## Some code examples
+
+The bicep code is defined to run in loops for the values it gets from the parameter file. Here **resourceArray** and **rgName** are the keys in **main.parameters.json** file
+
+```
+resource rgs 'Microsoft.Resources/resourceGroups@2021-04-01' = [for (res, i) in resourceArray: {
+  name: res.rgName
+  location: res.rgLocation
+  tags: res.tags
+}]
+```
+
 ## Resources that are created
 
 The list of resources created by this Bicep Project are as follows : -
