@@ -63,39 +63,15 @@ Monitor your environment through data collection and alerts. Manage it to ensure
 References : [What is Cloud Adoption Framework](https://www.clouddirect.net/what-is-the-cloud-adoption-framework/)
 
 
-# Going through the Terraform code
+# Going through the Bicep code
 
-## Provider and Backend config
+The Bicep project is configured to work on the following principle
 
-The provider.tf file has the versions and required provider defined. Users may feel free to upgrade the terraform versions as per requirement. Please note that might effect the current code and certain changes may be required with the upgraded version.
+- The **main.bicep** creates all the Resource Groups, DDOS Plan and call the **resourcezone.bicep** file. Later it creates the VNET Peering and VPN Gateway
+- The **resourcezone.bicep** in returns calls the modules in **modules** directory and creates the resources.
+- The **main.parameters.json** file is passed to the command which contains all the key value pair of names of the resources. You need to exchange **"<Your Value Here>"** with your values.
 
-```
-terraform {
-  required_version = "~> 1.1.0"
-
-  required_providers {
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "2.93.1"
-    }
-  }
-
-......
-}
-```
-
-The backend is configured to use Azure Blob Storage Containers. This storage account and the container should be present in user's account in order to run the code. Exchange values of **<Your Value here>** with your values.
-
-```
-  backend "azurerm" {
-    resource_group_name  = "<Your Value here>"
-    storage_account_name = "<Your Value here>"
-    container_name       = "<Your Value here>"
-    key                  = "<Your Value here>"
-  }
-```
-
-## Resources details
+## Resources that are created
 
 The list of resources created by this Bicep Project are as follows : -
 
@@ -109,6 +85,7 @@ The list of resources created by this Bicep Project are as follows : -
     - Azure Bastian Host
     - Network Security Group with sample rules
     - Azure Storage Account
+    - VPN Connection to Remote Site Zone
 
 - Non Prod Zone
     - Resource Group
@@ -128,19 +105,17 @@ The list of resources created by this Bicep Project are as follows : -
     - Log Analytics Workspace
     - Azure Storage Account
 
+- Remote Site Zone (Read as On-Premise Network)
+    - Resource Group
+    - Virtual Network. Subnets
+    - VPN Connection to Landing Zone
 ## Diagram
 
 Here's a rough diagram of the resources it creates
 
 ![Diagram](./images/Diagram.png)
 
-## Operations details
-
-The Bicep project is configured to work on the following principle
-
-- The **main.bicep** creates the general Azure policy, All Resource groups and call the **resourcezone.bicep**.
-- The **resourcezone.bicep** in returns calls the modules in **modules** directory and creates the resources.
-- The **main.parameters.json** file is passed to the command which contains all the key value pair of names of the resources.
+## Run the code
 
 ### Authenticate Azure CLI
 
