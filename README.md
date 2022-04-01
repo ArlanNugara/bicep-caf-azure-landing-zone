@@ -8,9 +8,92 @@ Here's what Microsoft Official Article says about a landing Zone - [Watch it Her
 
 ## Features of Azure Landing Zone
 
+1. Scalable
 
+All Azure landing zones support cloud adoption at scale by providing repeatable environments, with consistent configuration and controls, regardless of the workloads or Azure resources deployed to each landing zone instance.
+
+2. Modular
+
+All Azure landing zones provide a modular approach to building out your environment, based on a common set of design areas. Each design area can be easily extended to support the distinct needs of various technology platforms like Azure SQL Database, Azure Kubernetes Service, and Azure Virtual Desktop.
+
+## Azure landing zone conceptual architecture
+
+For many organizations, the Azure landing zone conceptual architecture below represents the destination in their cloud adoption journey. It's a mature, scaled-out target architecture intended to help organizations operate successful cloud environments that drive their business while maintaining best practices for security and governance.
+
+This conceptual architecture represents scale and maturity decisions based on a wealth of lessons learned and feedback from customers who have adopted Azure as part of their digital estate.
+
+While your specific implementation might vary, as a result of specific business decisions or existing investments in tools that need to persist in your cloud environment, this conceptual architecture will help set a direction for the overall approach your organization takes to designing and implementing a landing zone.
+
+![Diagram](./images/ALZ_Conceptual_Diagram.png)
 
 # What is Cloud Adoption Framework ?
+
+The Cloud Adoption Framework (CAF Framework) is a collection of documentation, implementation guidance, best practices, and tools that are proven guidance from Microsoft designed to accelerate your cloud adoption journey. There are six stages to the CAF framework, and each stage has been crafted to help you accelerate your cloud adoption journey. Think of the CAF framework as your guide to making the most of your Azure investment.
+
+It’s important to note that the CAF framework isn’t just for businesses that are new to the cloud, it can be used by businesses at any stage of their cloud journey. And we’re here to help you understand how you can start using it.
+
+## What are the six stages of the Cloud Adoption Framework?
+
+1. Strategy
+
+Start by understanding your business objectives to identify how Azure can support them. Microsoft has created a Cloud Journey Tracker to help identify the adoption path suited for your business.
+
+2. Plan
+
+Start aligning your people, processes, and technology to map out your cloud adoption plan. This is where you rationalize your current estate using the 5 R’s of application modernisation.
+
+3. Ready
+
+This is where you prepare your environment using the Azure Setup Guide created by Microsoft. Once you’re all prepared it’s time to deploy your landing zone – a basic building block of any migration.
+
+4. Adopt
+
+The adopt stage is split out into two parts – migrate and innovate. You can simply migrate your on-premises environment to the cloud. This is used when your workloads don’t warrant investment. Or you can innovate where you take advantage of cloud-native technologies to modernise your digital state using DevOps.
+
+5. Govern
+
+Create benchmarks and implement a governance minimum variable product to stay on track. Working with an Azure Expert MSP can help you govern your environment, helping you maintain your progress.
+
+6. Manage
+
+Monitor your environment through data collection and alerts. Manage it to ensure your following best practices to track your performance. And make sure you’ve created a resilient platform that can recover from any issues.
+
+![Diagram](./images/CAF.png)
+
+References : [What is Cloud Adoption Framework](https://www.clouddirect.net/what-is-the-cloud-adoption-framework/)
+
+
+# Going through the Terraform code
+
+## Provider and Backend config
+
+The provider.tf file has the versions and required provider defined. Users may feel free to upgrade the terraform versions as per requirement. Please note that might effect the current code and certain changes may be required with the upgraded version.
+
+```
+terraform {
+  required_version = "~> 1.1.0"
+
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "2.93.1"
+    }
+  }
+
+......
+}
+```
+
+The backend is configured to use Azure Blob Storage Containers. This storage account and the container should be present in user's account in order to run the code. Exchange values of **<Your Value here>** with your values.
+
+```
+  backend "azurerm" {
+    resource_group_name  = "<Your Value here>"
+    storage_account_name = "<Your Value here>"
+    container_name       = "<Your Value here>"
+    key                  = "<Your Value here>"
+  }
+```
 
 ## Resources details
 
